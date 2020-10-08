@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.PrimerPantallaController">
+    <children>
+        <ImageView fitHeight="380.0" fitWidth="515.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../imagenes/imagen%20taller.jpg" />
+            </image>
+        </ImageView>
+        <MenuBar fx:id="Menu" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+            <menus>
+                <Menu fx:id="ClientesIndividuales" mnemonicParsing="false" text="Clientes">
+                    <items>
+                        <MenuItem fx:id="UsuariosIndividual" mnemonicParsing="false" onAction="#UsuariosIndividual" text="Crear, Modificar y Eliminar" />
+                    </items>
+                </Menu>
+                <Menu fx:id="ClientesEmpresa" mnemonicParsing="false" text="Productos">
+                    <items>
+                        <MenuItem fx:id="ProductosIndividual" mnemonicParsing="false" onAction="#ProductosIndividual" text="Crear, Modificar y Eliminar" />
+                    </items>
+                </Menu>
+                <Menu fx:id="Productos" mnemonicParsing="false" text="Ordenes de Compra">
+                    <items>
+                        <MenuItem fx:id="CambiosIndividual" mnemonicParsing="false" onAction="#CambioIndividual" text="Crear, Modificar y Eliminar" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>

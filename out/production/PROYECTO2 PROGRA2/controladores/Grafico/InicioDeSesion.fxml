@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="319.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.InicioDeSesionController">
+    <children>
+        <ImageView fitHeight="305.0" fitWidth="400.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../imagenes/imagen taller.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="111.0" layoutY="14.0" text="Bienvenido al Programa">
+            <font>
+                <Font size="18.0" />
+            </font></Label>
+        <TextField fx:id="txtUser" accessibleRole="COMBO_BOX" alignment="TOP_CENTER" layoutX="132.0" layoutY="110.0" prefHeight="25.0" prefWidth="137.0" promptText="users" />
+        <PasswordField fx:id="txtpassword" alignment="TOP_CENTER" layoutX="127.0" layoutY="180.0" promptText="password" />
+        <Label layoutX="161.0" layoutY="162.0" text="CONTRASEÑA" />
+        <Label layoutX="173.0" layoutY="79.0" text="USUARIO" />
+        <Button fx:id="btnValidar" layoutX="162.0" layoutY="227.0" mnemonicParsing="false" onAction="#btmInicio" prefHeight="35.0" prefWidth="83.0" text="INICIAR" />
+
+    </children>
+</AnchorPane>

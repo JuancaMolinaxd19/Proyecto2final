@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.UsuariosIndividualesController">
+    <children>
+        <Label layoutX="37.0" layoutY="58.0" text="Nombres  " />
+        <TextField fx:id="txtNombres" alignment="TOP_CENTER" layoutX="100.0" layoutY="54.0" prefHeight="25.0" prefWidth="194.0" promptText="Jose Alfredo" />
+        <Label layoutX="347.0" layoutY="58.0" text="Apellidos" />
+        <TextField fx:id="txtApellidos" alignment="TOP_CENTER" layoutX="410.0" layoutY="54.0" prefHeight="25.0" prefWidth="194.0" promptText="Jimenez Garcia" />
+        <Label layoutX="348.0" layoutY="98.0" text="Telefono" />
+        <TextField fx:id="txtTelefono" layoutX="410.0" layoutY="94.0" prefHeight="25.0" prefWidth="194.0" />
+        <Label layoutX="37.0" layoutY="98.0" text="DPI" />
+        <TextField fx:id="txtDPI" layoutX="100.0" layoutY="94.0" />
+        <Button fx:id="btnAgregarPersona" layoutX="169.0" layoutY="233.0" mnemonicParsing="false" onAction="#AgregarRegistro" prefHeight="25.0" prefWidth="91.0" text="AGREGAR" />
+        <Button fx:id="btnEliminarCliente" layoutX="400.0" layoutY="233.0" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="25.0" prefWidth="91.0" text="ELIMINAR" />
+        <Label layoutX="322.0" layoutY="144.0" text="CREAR CLIENTE INDIVIDUAL">
+            <font>
+                <Font size="14.0" />
+            </font></Label>
+        <Button fx:id="btnCambiosCliente" layoutX="287.0" layoutY="233.0" mnemonicParsing="false" onAction="#modificarCliente" prefHeight="25.0" prefWidth="91.0" text="MODIFICAR" />
+        <TableView fx:id="tableInformacion" layoutY="274.0" onMouseClicked="#seleccionar" prefHeight="238.0" prefWidth="664.0">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="107.0" text="ID" />
+                <TableColumn fx:id="colNombres" prefWidth="134.0" text="Nombre" />
+                <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="121.0" text="Apellido" />
+                <TableColumn fx:id="colTelefono" prefWidth="120.0" text="Telefono" />
+                <TableColumn fx:id="colDPI" prefWidth="180.0" text="DPI" />
+
+            </columns>
+        </TableView>
+        <TextField fx:id="txtTipo" alignment="TOP_CENTER" layoutX="100.0" layoutY="141.0" promptText="Individual / Empresa" />
+        <Label alignment="CENTER" layoutX="36.0" layoutY="141.0" prefHeight="25.0" prefWidth="40.0" text="Cliente " textAlignment="CENTER" />
+    </children>
+</AnchorPane>

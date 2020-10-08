@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="262.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.ProductosIndividualesController">
+    <children>
+        <Label layoutX="28.0" layoutY="37.0" text="Producto" />
+        <Label layoutX="29.0" layoutY="112.0" text="Precio" />
+        <Label layoutX="29.0" layoutY="73.0" text="Unidades" />
+        <TextField fx:id="txtProducto" layoutX="89.0" layoutY="33.0" />
+        <TextField fx:id="txtPrecio" layoutX="89.0" layoutY="108.0" prefHeight="25.0" prefWidth="92.0" promptText="Q." />
+        <TextField fx:id="txtCantidad" layoutX="89.0" layoutY="69.0" prefHeight="25.0" prefWidth="72.0" promptText="en numeros" />
+        <Button fx:id="btnAgregarProducto" layoutX="46.0" layoutY="145.0" mnemonicParsing="false" onAction="#AgregarProducto" prefHeight="25.0" prefWidth="118.0" text="Agregar Producto" />
+        <TableView fx:id="tableProducto" layoutX="246.0" layoutY="-1.0" onMouseClicked="#seleccionar" prefHeight="261.0" prefWidth="438.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="68.0" text="ID" />
+                <TableColumn fx:id="colCantidad" prefWidth="68.0" text="Unidades" />
+                <TableColumn fx:id="colProducto" prefWidth="172.0" text="Producto" />
+                <TableColumn fx:id="colPrecio" prefWidth="128.0" text="Precio" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnModificarProducto" layoutX="46.0" layoutY="178.0" mnemonicParsing="false" onAction="#ModificarProducto" text="Modificar Producto" />
+        <Button fx:id="btnEliminarProducto" layoutX="46.0" layoutY="212.0" mnemonicParsing="false" onAction="#EliminarProducto" prefHeight="25.0" prefWidth="118.0" text="Eliminar Producto" />
+    </children>
+</AnchorPane>
